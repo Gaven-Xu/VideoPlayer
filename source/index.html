@@ -3,63 +3,30 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>⊙ω⊙</title>
-	<style media="screen">
-		html,
-		body,
-		#target {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			background: rgb(80, 80, 80);
-			overflow: hidden;
-			position: relative;
-			cursor: default;
-		}
-
-		.back {
-			height: 54px;
-			width: 240px;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			margin-left: -120px;
-			margin-top: -31px;
-			background: #4c4c4c;
-			border: 3px solid #9c9c9c;
-			z-index: 0;
-		}
-		#font,#prog{
-			height: 54px;
-			position: absolute;
-			left:0;
-			top:0;
-		}
-		#font{
-			font-size: 18px;
-	    line-height: 50px;
-	    text-align: center;
-	    color: #9c9c9c;
-	    width: 100%;
-	    z-index: 10;
-		}
-		#prog{
-			width:0%;
-			background: rgb(0, 195, 37);
-			z-index:5;
-		}
-	</style>
+	<title>G-Player</title>
+	<link rel="stylesheet" href="./style/style.css" media="screen" title="no title">
 </head>
 
 <body>
+	<!-- <iframe src="http://www.unnuo.com/" width="100%" height="100%"></iframe> -->
 	<div id="target">
-		<div class="back">
+		<div id="Play_Notice">
 			<div id="font">DRAG VIDEO HERE</div>
 			<div id="prog"></div>
 		</div>
+		<div id="PlayerList">
+			<div id="List_Area"></div>
+			<div id="ToggleBtn">
+				<div class="togglebtnshadow1"></div>
+				<div class="togglebtnshadow2"></div>
+			</div>
+		</div>
 	</div>
-	<!-- // <script src="./player.js" charset="utf-8"></script> -->
+
+	<script src="./lib/gaven.js" charset="utf-8"></script>
+	<script src="./script/PlayerItem.js" charset="utf-8"></script>
+	<script src="./script/PlayerList.js" charset="utf-8"></script>
+	<script src="./script/player.js" charset="utf-8"></script>
 </body>
 
 </html>

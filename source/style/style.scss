@@ -1,0 +1,185 @@
+#target,
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: rgb(80, 80, 80);
+	overflow: hidden;
+	position: relative;
+	cursor: default;
+}
+
+*::-webkit-scrollbar {
+	opacity: 0;
+	display: none;
+	width: 5px;
+	height: 5px;
+}
+
+*::-webkit-scrollbar-button {
+	display: none;
+}
+
+*::-webkit-scrollbar-track {
+	background: #c4c4c4;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #828282;
+	border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #6e6e6e;
+}
+
+*::-webkit-scrollbar-corner {
+	background: #82AFFF;
+}
+
+*::-webkit-scrollbar-resizer {
+	background: #c61818;
+}
+
+#Play_Notice {
+	height: 54px;
+	width: 240px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -120px;
+	margin-top: -31px;
+	background: #4c4c4c;
+	border: 3px solid #9c9c9c;
+	z-index: 0;
+
+	#font {
+		height: 54px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 18px;
+		line-height: 50px;
+		text-align: center;
+		color: #9c9c9c;
+		width: 100%;
+		z-index: 10;
+	}
+}
+
+#PlayerList {
+	width: 220px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	background: #999;
+	border-left: 1px solid #a5a5a5;
+	box-shadow: 0 0 3px #060606;
+	transition: all 0.5s;
+}
+
+#PlayerList:hover ::-webkit-scrollbar{
+	display: block;
+}
+
+#List_Area {
+	height: 100%;
+	overflow-y: scroll;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.list_item {
+		background: rgba(255, 255, 255, 0.31);
+		border-bottom: 1px solid #000;
+		list-style: none;
+		font-size: 14px;
+		padding: 5px;
+	}
+}
+
+#ToggleBtn {
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	left: -60px;
+	z-index: 1000;
+	background: rgba(44, 26, 136, 0);
+
+	.togglebtnshadow1,
+	.togglebtnshadow2 {
+		display: none;
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	.togglebtnshadow1 {
+		background: rgba(222, 222, 222, 0.5);
+		z-index: 999;
+	}
+
+	.togglebtnshadow2 {
+		background: rgba(176, 191, 205, 0.5);
+		z-index: 998;
+	}
+}
+
+#target:hover .togglebtnshadow1 {
+	-webkit-animation: togglebtnshadow1 1.5s linear infinite alternate;
+	animation: togglebtnshadow1 1.5s linear infinite alternate;
+	display: block;
+}
+
+#target:hover .togglebtnshadow2 {
+	-webkit-animation: togglebtnshadow2 1.5s linear infinite alternate;
+	animation: togglebtnshadow2 1.5s linear infinite alternate;
+	display: block;
+}
+
+.sh_playerlist {
+	right: -222px !important;
+}
+@keyframes togglebtnshadow1 {
+	0% {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+
+	50% {
+		transform: scale(0);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+}
+@keyframes togglebtnshadow2 {
+	0% {
+		transform: scale(0);
+		opacity: 0.5;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+
+	100% {
+		transform: scale(0);
+		opacity: 0.5;
+	}
+}

@@ -6,7 +6,7 @@ packager({
     name: 'videoplayer',
     dir: "./source",// ソースフォルダのパス
     out: "./dist",// 出力先フォルダのパス
-    icon: "./source/favicon.ico",// アイコンのパス
+    icon: "./source/Sound_Player.ico",// アイコンのパス
     platform: "win32",
     arch: "x64",
     version: "1.3.4",// Electronのバージョン

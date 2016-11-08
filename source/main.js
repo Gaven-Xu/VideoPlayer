@@ -6,8 +6,8 @@ const {
 const path = require('path');
 
 const indexPath = path.join('file://', __dirname, 'index.html');
-const ScreenWidth = 683,
-    ScreenHeight = 384;
+const ScreenWidth = 1000,
+    ScreenHeight = 600;
 
 let win;
 
@@ -37,11 +37,7 @@ function createWindow() {
     win = new BrowserWindow({
         width: ScreenWidth,
         height: ScreenHeight,
-				useContentSize:true,
-				resizable:false,
-				minimizable:true,
-				maximizable:false,
-				alwaysOnTop:true
+				useContentSize:true
     });
 
     win.setMenu(null);
@@ -49,7 +45,7 @@ function createWindow() {
     win.loadURL(indexPath);
 
     // Open the DevTools.
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     console.log(win);
     // Emitted when the window is closed.
 
