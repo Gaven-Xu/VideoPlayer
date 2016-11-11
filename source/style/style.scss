@@ -49,23 +49,23 @@ html {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	margin-left: -120px;
-	margin-top: -31px;
+	margin-left: -118px;
+	margin-top: -29px;
 	background: #4c4c4c;
 	border: 3px solid #9c9c9c;
-	z-index: 0;
+	z-index: 5;
 
 	#font {
 		height: 54px;
-		position: absolute;
-		left: 0;
-		top: 0;
-		font-size: 18px;
-		line-height: 50px;
-		text-align: center;
-		color: #9c9c9c;
-		width: 100%;
-		z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: #9c9c9c;
+    width: 100%;
+    z-index: 10;
 	}
 }
 
@@ -78,10 +78,19 @@ html {
 	border-left: 1px solid #a5a5a5;
 	box-shadow: 0 0 3px #060606;
 	transition: all 0.5s;
+	z-index:1000;
+
+	&:hover {
+		display: block;
+	}
 }
 
-#PlayerList:hover ::-webkit-scrollbar{
-	display: block;
+#PlayArea {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 50;
+	display: none;
 }
 
 #List_Area {
@@ -94,11 +103,31 @@ html {
 	}
 
 	.list_item {
-		background: rgba(255, 255, 255, 0.31);
-		border-bottom: 1px solid #000;
+		background: #bbb;
+		border-bottom: 1px solid #9a9a9a;
 		list-style: none;
 		font-size: 14px;
 		padding: 5px;
+		position: relative;
+
+		.list_item_del {
+			position: absolute;
+			left: 195px;
+			background: #b3b3b3;
+			border: 1px solid #ababab;
+			height: 16px;
+			width: 16px;
+			text-align: center;
+			cursor: pointer;
+			line-height: 16px;
+			top: 50%;
+			margin-top: -9px;
+		}
+
+		&:hover {
+			background: #62a962 !important;
+			color: #fff !important;
+		}
 	}
 }
 
@@ -149,7 +178,7 @@ html {
 }
 
 .sh_playerlist {
-	right: -222px !important;
+	-webkit-transform: translate3D(222px,0,0);
 }
 @keyframes togglebtnshadow1 {
 	0% {
