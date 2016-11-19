@@ -1,4 +1,7 @@
 {
+	"name":"G-Player",
+	"author":"Gaven",
+	"main":"./source/main.js",
   "devDependencies": {
     "electron-packager": "^8.2.0"
   }

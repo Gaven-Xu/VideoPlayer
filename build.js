@@ -3,7 +3,7 @@ const packager = require("electron-packager");
 const package = require("./source/package.json");
 
 packager({
-    name: 'videoplayer',
+    name: 'G-Player',
     dir: "./source",// ソースフォルダのパス
     out: "./dist",// 出力先フォルダのパス
     icon: "./source/Sound_Player.ico",// アイコンのパス

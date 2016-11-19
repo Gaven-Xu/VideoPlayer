@@ -1,24 +1,5 @@
 {
-  "name": "videoplayer",
-  "version": "1.0.0",
-  "description": "an webm video player build by Gaven",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Gaven-Xu/VideoPlayer.git"
-  },
-  "keywords": [
-    "video-player",
-    "webkit",
-    "electron"
-  ],
-  "author": "Gaven",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Gaven-Xu/VideoPlayer/issues"
-  },
-  "homepage": "https://github.com/Gaven-Xu/VideoPlayer#readme"
+	"name":"G-Player",
+	"author":"Gaven",
+	"main":"./main.js"
 }

@@ -2,40 +2,25 @@ window.gaven = window.gaven || {};
 
 (function() {
 
-	function PlayerList(files,containerid) {
-		this._playerList = [];
-		this._container = document.getElementById(containerid);
-		this._htmlNode = document.createElement('ul');
-		this._container.appendChild(this._htmlNode);
+    function PlayerList(files, containerid) {
+        this._container = document.getElementById(containerid);
+        this._playerList = [];
+    }
 
-		var item;
-		for (var i = 0; i < files.length; i++) {
-			item = new gaven.PlayItem(files[i],'li'); //  改写，需要传入file item html node
-			this._playerList.push(item);
-			this.addItem(item);
+    PlayerList.prototype.addItems = function(files,ele) {
+        for (var i = 0; i < files.length; i++) {
+						// var reader = new FileReader();
+						// var path = reader.readAsDataURL(files[i]);
+            item = new gaven.PlayerItem(files[i],ele); //  改写，需要传入file item html node
+            this._container.appendChild(item.htmlNode);
+        }
+    }
+
+		PlayerList.prototype.delItem = function(item) {
+			this._container.removeChild(item);
 		}
-	}
 
-	var p = PlayerList.prototype;
 
-	Object.defineProperties(p,{
-		htmlNode:{
-			get:function() {
-				return this._htmlNode;
-			}
-		},
-		playerList:{
-			get:function() {
-				return this._playerList;
-			}
-		}
-	});
-
-	p.addItem = function(item) {
-		console.log(this.htmlNode);
-		this.htmlNode.appendChild(item.htmlNode);
-	}
-
-	gaven.PlayerList = PlayerList;
+    gaven.PlayerList = PlayerList;
 
 })();
