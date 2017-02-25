@@ -11,7 +11,9 @@ window.gaven = window.gaven || {};
         }
         //
         ClassHandle(target);
+        // AjaxHandle(target);
         return target;
+        
     }
 
     window.gaven = gaven;

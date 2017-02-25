@@ -5,13 +5,13 @@ const package = require("./source/package.json");
 packager({
     name: 'G-Player',
     dir: "./source",// ソースフォルダのパス
-    out: "./dist",// 出力先フォルダのパス
+    out: "./distd",// 出力先フォルダのパス
     icon: "./source/Sound_Player.ico",// アイコンのパス
     platform: "win32",
     arch: "x64",
     version: "1.3.4",// Electronのバージョン
     overwrite: true,// 上書き
-    asar: false,// asarパッケージ化
+    asar: true,// asarパッケージ化
     "app-version": package["version"],// アプリバージョン
     "app-copyright": "Copyright (C) 2016 "+package["author"]+".",// コピーライト
 

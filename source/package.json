@@ -1,5 +1,23 @@
 {
-	"name":"G-Player",
-	"author":"Gaven",
-	"main":"./main.js"
+  "name": "gplayer",
+  "author": "Gaven",
+  "main": "./main.js",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaven-Xu/VideoPlayer.git"
+  },
+  "keywords": [
+    "player",
+    "gaven"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaven-Xu/VideoPlayer/issues"
+  },
+  "homepage": "https://github.com/Gaven-Xu/VideoPlayer#readme",
+  "description": ""
 }
